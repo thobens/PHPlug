@@ -1,0 +1,25 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="template">
+		<xs:annotation>
+			<xs:documentation>
+				A Template that will be stored in the TemplateStore
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="path" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>
+						the path to the template.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="id" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the id of the template
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

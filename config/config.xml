@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config SYSTEM "http://phplug.net/phplug/dtd/config.dtd">
+<config>
+
+	<!-- The directory where plugins should be installed, relative from document root.
+	     It must have read/write permissions for all (UNIX: 777 or 755) -->
+
+	<entry key="ch.thobens.phplug.plugindir" value="./PHPlug/plugins" />
+	
+	
+	
+	<!-- The directory, where plugin packages are uploaded and taken for install -->
+	
+	<entry key="ch.thobens.phplug.packagedir" value="./PHPlug/plugins/packages" />
+	
+	
+	
+	<!-- The root direcrory of phplug, relative from document root -->
+
+	<entry key="ch.thobens.phplug.rootdir" value="./PHPlug" />
+	
+
+
+	<!-- The log configration for this application, relative from document root -->
+
+	<entry key="ch.thobens.phplug.logcfg" value="./config/logging.xml" />
+	
+
+
+	<!-- The log file of this application, relative from document root -->
+
+	<entry key="ch.thobens.phplug.logfile" value=".log/out.log" />
+	
+
+
+	<!-- Indicates whether this application runs in debug mode -->
+
+	<entry key="ch.thobens.phplug.debugmode" value="true" />
+
+
+
+	<!-- Email address of the administrator -->
+
+	<entry key="ch.thobens.phplug.admin.mail" value="thobens@gmail.com" />
+	
+	
+	
+	<!-- PHP File Extensions. This should be a comma separated list of extensions,
+		 for example "php,inc" -->
+
+	<entry key="ch.thobens.phplug.php.extensions" value="php,inc" />
+
+</config>

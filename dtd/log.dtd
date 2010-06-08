@@ -1,0 +1,7 @@
+<!ELEMENT ROOT	(log)>
+<!ELEMENT log	(logrule*)>
+
+<!ELEMENT logrule	EMPTY>
+<!ATTLIST logrule
+			fileNamePattern	CDATA	#REQUIRED
+			logLevel		(INFO|WARN|ERROR|DEBUG|TRACE)		#REQUIRED>

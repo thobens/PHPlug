@@ -1,0 +1,34 @@
+<!ELEMENT ROOT		(plugin)>
+
+<!ELEMENT plugin	(dependencies?|extensions?|extensionPoints?|exports?)+>
+<!ATTLIST plugin
+				id					ID		#REQUIRED
+				class				CDATA	#REQUIRED
+				scope				(application|session|request)	'session'
+				version				CDATA	#REQUIRED>
+				
+	<!ELEMENT dependencies	(dependency*)>
+	
+		<!ELEMENT dependency	EMPTY>
+		<!ATTLIST dependency	
+				id	CDATA	#REQUIRED>
+	
+	<!ELEMENT extensions	(extension*)>
+	
+		<!ELEMENT extension	ANY>
+		<!ATTLIST extension
+				point	CDATA	#REQUIRED>
+			
+	<!ELEMENT extensionPoints	(extensionPoint*)>
+	
+		<!ELEMENT extensionPoint EMPTY>
+		<!ATTLIST extensionPoint
+				id		ID		#REQUIRED
+				name	CDATA	#IMPLIED
+				schema	CDATA	#REQUIRED>
+			
+	<!ELEMENT exports	(export*)>
+		
+		<!ELEMENT export	EMPTY>
+		<!ATTLIST export
+				folder	CDATA	#REQUIRED>

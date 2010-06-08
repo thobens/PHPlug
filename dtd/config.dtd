@@ -1,0 +1,7 @@
+<!ELEMENT ROOT		(config)>
+<!ELEMENT config	(entry*)>
+
+<!ELEMENT entry	EMPTY>
+<!ATTLIST entry
+			key		ID	#REQUIRED
+			value	CDATA	#REQUIRED>

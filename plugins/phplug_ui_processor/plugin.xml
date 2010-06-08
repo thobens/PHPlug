@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="phplug_ui_processor" version="1.0.0" class="phplug\plugins\phplug_ui_processor\UIProcessorPlugin">
+	<dependencies>
+		<dependency id="phplug_core"/>
+		<dependency id="phplug_ui"/>
+	</dependencies>
+	
+	<extensionPoints>
+		<extensionPoint schema="schema/template.xsd" id="ch.thobens.phplug.ui.processor.template"/>
+	</extensionPoints>
+
+	<extensions>
+		<extension point="ch.thobens.phplug.ui.processor">
+			<uiprocessor class="phplug\plugins\phplug_ui_processor\uiprocessor\DefaultUIProcessor" />
+		</extension>
+	</extensions>
+
+	<exports>
+		<export folder="uiprocessor" />
+	</exports>
+</plugin>

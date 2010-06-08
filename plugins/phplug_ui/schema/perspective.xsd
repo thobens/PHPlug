@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="perspective">
+		<xs:annotation>
+			<xs:documentation>
+				Platform Extension Point
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="class" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>
+						Implementation class of the IPlatform interface. If empty,
+						the default Platform will be used.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="nature" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The nature of the Perspective. This is used for the association
+						to a specific context.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="id" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The id of the perspective
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,98 @@
+========================================================================
+phplug - Plugin framework for PHP
+
+Easy developing and deploying functionality to your PHP application.
+
+version 0.1
+README Text File
+
+http://www.phplug.net
+========================================================================
+
+ 1. Introduction
+ ----------------
+
+With phplug, it's easy to develop high performance and high quality applications,
+based on the object oriented branch of PHP. The main goal of this project is to
+maximize code re-usability and accessibility, as such as minimizing performance
+overkills, even (or especially) in large, rich ajax applications.
+
+You have the choice, develop a whole application encapsulated in plugins, or encapsulate
+only parts of your application and use them all over your project (e.g. for business rules, etc.)
+
+If you are experienced in Eclipse plugin development, you'll rarely have problems with this framework.
+
+
+
+ 2. Information
+ ---------------
+ 
+For more Information about the project, visit http://www.phplug.net
+  
+If you want to know anything about implementing this framework,
+visit http://wiki.phplug.net
+ 
+There's also a community page that will bring you much know-how from
+other people. Visit http://community.phplug.net
+ 
+Want to contribute? Or do you have any ideas to improve this project?
+Go to http://contribution.phplug.net
+
+It would be grateful, if you would report issues on http://issues.phplug.net
+ 
+A SVN repository is available at http://svn.phplug.net
+
+
+
+ 3. Installation
+ ----------------
+
+If you are about to create a new project, the installation is very easy:
+	
+	1. Go to the root directory of your application
+	2. Copy the ch.thobens.phplug.tar.gz into this directory
+	3. Unpack the archive
+	
+Now you have the framework. If you downloaded the Platform only, you will now have just
+one plugin in your application that will print the well-known "Hello World!" text. You
+can remove this one later, it's just for you to check if the installation was successful.
+Otherwise you'll have a bunch of already-installed plugins that you can use as they are.
+
+If you have to integrate phplug in an existing framework, it's a bit more complicated by now:
+//TODO
+
+
+
+ 4. Documentation
+ -----------------
+
+For documentation about PHP, visit the PHP documentation site.
+For information about Phplug take a look at our wiki (URL listed under section 2).
+You can learn much about the framework if you throw an eye on the code, particularly
+on the existent plugins.
+
+
+
+ 5. Contribution
+ ----------------
+ 
+As this project is licensed under LGPL, you are welcome to contribute to this project.
+In section 2, you can see where to find information about contribution.
+Plugin developers may visit http://plugins.phplug.net to publish their plugins. 
+ 
+ 
+ 
+ 6. Known Issues
+ ----------------
+ 
+- Class declaration fails if implemented interface is not declared yet (may be a PHP issue)
+ 
+ 
+ You can see all issues on http://issues.phplug.net
+ 
+ 
+ 
+ 7. Good luck and enjoy
+ -----------------------
+ 
+ Remember to provide us with your input ;)

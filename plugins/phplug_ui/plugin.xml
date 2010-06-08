@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="phplug_ui" version="1.0.0" class="phplug\plugins\phplug_ui\UIPlugin">
+	<dependencies>
+		<dependency id="phplug_core"/>
+	</dependencies>
+	
+	<extensionPoints>
+		<extensionPoint schema="schema/workbench.xsd" id="ch.thobens.phplug.ui.workbench"/>
+		<extensionPoint schema="schema/uiprocessor.xsd" id="ch.thobens.phplug.ui.processor"/>
+		<extensionPoint schema="schema/perspective.xsd" id="ch.thobens.phplug.ui.perspective"/>
+	</extensionPoints>
+	
+	<extensions>
+		<extension point="ch.thobens.phplug.ui.workbench">
+			<workbench class="phplug\plugins\phplug_ui\ui\Workbench" template="$pluginPath/templates/workbench/default.tpl" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.processor.template">
+			<template path="/PHPlug/plugins/phplug_ui/templates/perspective/default.tpl" id="ch.thobens.templates.perspective.default" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.processor.template">
+			<template path="/PHPlug/plugins/phplug_ui/templates/layout/grid.tpl" id="ch.thobens.templates.layout.grid" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.processor.template">
+			<template path="/PHPlug/plugins/phplug_ui/templates/layout/float.tpl" id="ch.thobens.templates.layout.float" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.processor.template">
+			<template path="/PHPlug/plugins/phplug_ui/templates/container.tpl" id="ch.thobens.templates.container" />
+		</extension>
+	</extensions>
+	
+	<exports>
+		<export folder="ui" />
+		<export folder="ui/views" />
+		<export folder="ui/layouts" />
+		<export folder="ui/layouts/impl" />
+		<export folder="ui/listener" />
+	</exports>
+</plugin>

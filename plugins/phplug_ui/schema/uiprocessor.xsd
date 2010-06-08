@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="uiprocessor">
+		<xs:annotation>
+			<xs:documentation>
+				UI Processor implementation
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="class" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						Implementation class of the UIProcessor interface
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

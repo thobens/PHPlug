@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="phplug_core" version="1.0.0" class="phplug\plugins\phplug_core\CorePlugin">
+	<exports>
+		<export folder="actions" />
+	</exports>
+</plugin>

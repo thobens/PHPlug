@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="thobens_web_testpage" version="1.0.0" class="phplug\plugins\thobens_web_testpage\TestPagePlugin">
+	<dependencies>
+		<dependency id="phplug_ui"/>
+		<dependency id="phplug_ui_widgets"/>
+	</dependencies>
+	<extensions>
+		<extension point="ch.thobens.phplug.ui.perspective">
+			<perspective class="phplug\plugins\thobens_web_testpage\perspectives\TestPerspective" id="ch.thobens.web.perspective.default" nature="defaultNature" />
+		</extension>
+	</extensions>
+	<exports>
+		<export folder="perspectives"/>
+		<export folder="views"/>
+	</exports>
+</plugin>

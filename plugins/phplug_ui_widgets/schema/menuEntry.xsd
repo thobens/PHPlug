@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="menuEntry">
+		<xs:annotation>
+			<xs:documentation>
+				A main menu entry
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="label" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the label of a menu entry
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="parentId" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the id of the parent menu or parent menu entry
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="group" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>
+						the group of a menu
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="id" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the id of a menu entry
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="action" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the id of the action that will be triggered when clicking on the menu entry
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="menuName" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The name of the menu. All menu entries with the same name are build to one menu composite
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
