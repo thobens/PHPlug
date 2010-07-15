@@ -3,9 +3,10 @@ namespace phplug\plugins\thobens_web_testpage\views;
 
 use phplug\plugins\phplug_ui\ui\views as v,
 	phplug\plugins\phplug_ui\ui\layouts,
-	phplug\plugins\phplug_ui_widgets\widgets,
-	phplug\plugins\phplug_ui_widgets\widgets\form,
-	phplug\plugins\phplug_ui_widgets\widgets\form\controls;
+	phplug\plugins\phplug_ui_widgets_qx\widgets,
+	phplug\plugins\phplug_ui_widgets_qx\widgets\form,
+	phplug\plugins\phplug_ui_widgets_qx\widgets\form\controls,
+	phplug\plugins\phplug_ui_widgets\widgets\form\controls as c;
 
 /**
  * 
@@ -34,9 +35,9 @@ class NonsenseView extends v\ViewPart {
 		$select = new controls\Select(null,0);
 		$select->setName("testselect2");
 		$select->setValue("testoption3");
-		$select->addOption(new controls\SelectOption("Tests Options 1","testoption1"));
-		$select->addOption(new controls\SelectOption("Tests Options 2","testoption2"));
-		$select->addOption(new controls\SelectOption("Tests Options 3" ,"testoption3"));
+		$select->addOption(new c\SelectOption("Tests Options 1","testoption1"));
+		$select->addOption(new c\SelectOption("Tests Options 2","testoption2"));
+		$select->addOption(new c\SelectOption("Tests Options 3" ,"testoption3"));
 		
 		$submit = new controls\Input(null,0);
 		$submit->setName("foo");

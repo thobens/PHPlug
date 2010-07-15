@@ -3,9 +3,10 @@ namespace phplug\plugins\thobens_web_testpage\views;
 
 use phplug\plugins\phplug_ui\ui\views as v,
 	phplug\plugins\phplug_ui\ui\layouts,
-	phplug\plugins\phplug_ui_widgets\widgets,
-	phplug\plugins\phplug_ui_widgets\widgets\form,
-	phplug\plugins\phplug_ui_widgets\widgets\form\controls;
+	phplug\plugins\phplug_ui_widgets_qx\widgets,
+	phplug\plugins\phplug_ui_widgets_qx\widgets\form,
+	phplug\plugins\phplug_ui_widgets_qx\widgets\form\controls,
+	phplug\plugins\phplug_ui_widgets\widgets\form\controls as c;
 /**
  * 
  * @author A. Doebeli <thobens@gmail.com>
@@ -34,9 +35,9 @@ class AnotherView extends v\ViewPart {
 		$select = new controls\Select(null,0);
 		$select->setName("testselect");
 		$select->setValue("testoption2");
-		$select->addOption(new controls\SelectOption("Test Option 1","testoption1"));
-		$select->addOption(new controls\SelectOption("Test Option 2","testoption2"));
-		$select->addOption(new controls\SelectOption("Test Option 3","testoption3"));
+		$select->addOption(new c\SelectOption("Test Option 1","testoption1"));
+		$select->addOption(new c\SelectOption("Test Option 2","testoption2"));
+		$select->addOption(new c\SelectOption("Test Option 3","testoption3"));
 		
 		$submit = new controls\Input(null,0);
 		$submit->setName("bsss");

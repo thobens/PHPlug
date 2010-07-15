@@ -5,5 +5,6 @@
 	<plugin id="phplug_ui" active="true" class="UIPlugin" />
 	<plugin id="phplug_ui_processor" active="true" class="UIProcessorPlugin" />
 	<plugin id="phplug_ui_widgets" active="true" class="WidgetPlugin" />
+	<plugin id="phplug_ui_widgets_qx" active="true" class="WidgetPlugin" />
 	<plugin id="thobens_web_testpage" active="true" class="TestPagePlugin" />
 </platform>

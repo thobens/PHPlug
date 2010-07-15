@@ -9,21 +9,13 @@ use phplug\platform as pf,
  * @author A. Doebeli <thobens@gmail.com>
  *
  */
-class Select extends form\Control {
+abstract class Select extends form\Control {
 	
-	private $options;
+	protected $options;
 
 	public function __construct($parent,$style=0) {
 		parent::__construct($parent,$style);
 		$this->options = array();
-	}
-	
-	public function draw() {
-		$uip = pf\PhplugPlatform::getActiveWorkbench()->getUIProcessor();
-		$uip->assign("name",$this->getName());
-		$uip->assign("value",$this->getValue());
-		$uip->assign("options",$this->getOptions());
-		return $uip->process("ch.thobens.templates.form.controls.select");
 	}
 	
 	public function getOptions() {

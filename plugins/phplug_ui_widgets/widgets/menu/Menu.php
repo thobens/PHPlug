@@ -1,5 +1,5 @@
 <?
-namespace phplug\plugins\phplug_ui_widgets\widgets\menu;
+namespace phplug\plugins\phplug_ui_widgets_qx\widgets\menu;
 
 use phplug\plugins\phplug_ui\ui as ui;
 
@@ -8,7 +8,7 @@ use phplug\plugins\phplug_ui\ui as ui;
  * @author A. Doebeli <thobens@gmail.com>
  *
  */
-class Menu extends ui\Composite {
+abstract class Menu extends ui\Composite {
 	
 	private $menus;
 	
@@ -18,20 +18,6 @@ class Menu extends ui\Composite {
 		parent::__construct($parent,$style);
 		$this->menus = array();
 		$this->menuCreated = false;
-	}
-	
-	public function draw() {
-		if($this->menuCreated) {
-			$layout = new FloatLayout();
-			foreach($this->menus as $menu) {
-				$layout->addComposite($menu,"70px","20px");
-			}
-			$contents = $layout->process();
-		} else {
-			$log = new PhplugLog();
-			$log->warn("Menu was not created before... Cannot draw menu!");
-		}
-		return $contents;
 	}
 	
 	public function createMenu($name) {

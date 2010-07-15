@@ -12,26 +12,4 @@
 		<extensionPoint schema="schema/menuEntry.xsd" id="ch.thobens.phplug.ui.menu.entry"/>
 	</extensionPoints>
 	
-	<extensions>
-		<extension point="ch.thobens.phplug.ui.processor.template">
-			<template path="/PHPlug/plugins/phplug_ui_widgets/templates/form/form.tpl" id="ch.thobens.templates.form.form" />
-		</extension>
-		<extension point="ch.thobens.phplug.ui.processor.template">
-			<template path="/PHPlug/plugins/phplug_ui_widgets/templates/form/controls/input.tpl" id="ch.thobens.templates.form.controls.input" />
-		</extension>
-		<extension point="ch.thobens.phplug.ui.processor.template">
-			<template path="/PHPlug/plugins/phplug_ui_widgets/templates/form/controls/select.tpl" id="ch.thobens.templates.form.controls.select" />
-		</extension>
-		<extension point="ch.thobens.phplug.ui.processor.template">
-			<template path="/PHPlug/plugins/phplug_ui_widgets/templates/form/controls/textarea.tpl" id="ch.thobens.templates.form.controls.textarea" />
-		</extension>
-	</extensions>
-	
-	<exports>
-		<export folder="widgets" />
-		<export folder="widgets/form" />
-		<export folder="widgets/form/controls" />
-		<export folder="widgets/menu" />
-	</exports>
-	
 </plugin>

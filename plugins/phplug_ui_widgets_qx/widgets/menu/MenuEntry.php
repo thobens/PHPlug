@@ -1,5 +1,5 @@
 <?
-namespace phplug\plugins\phplug_ui_widgets_qx\widgets\menu;
+namespace phplug\plugins\phplug_ui_widgets\widgets\menu;
 
 use phplug\plugins\phplug_ui\ui as ui;
 
