@@ -5,7 +5,7 @@ use phplug\platform as pf,
 	phplug\plugins\phplug_ui_widgets\widgets\form\controls;
 
 /**
- * A Basic Input Field, painted with qooxdoo
+ * A Basic Input Field, painted with qooxdoo.
  * @author A. Doebeli <thobens@gmail.com>
  *
  */
