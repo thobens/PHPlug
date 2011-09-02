@@ -27,14 +27,11 @@ If you are experienced in Eclipse plugin development, you'll rarely have problem
  2. Information
  ---------------
  
-For more Information about the project, visit http://www.phplug.net
+For more Information about the project, visit http://www.phplug.org
   
 If you want to know anything about implementing this framework,
 visit http://wiki.thobens.ch/display/PHPLUG/Home
  
-Want to contribute? Or do you have any ideas to improve this project?
-Go to http://contribution.phplug.net
-
 It would be grateful, if you would report issues on http://issues.phplug.net
  
 A GIT readonly repository is available at git://github.com/thobens/PHPlug.git
