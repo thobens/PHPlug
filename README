@@ -30,17 +30,14 @@ If you are experienced in Eclipse plugin development, you'll rarely have problem
 For more Information about the project, visit http://www.phplug.net
   
 If you want to know anything about implementing this framework,
-visit http://wiki.phplug.net
- 
-There's also a community page that will bring you much know-how from
-other people. Visit http://community.phplug.net
+visit http://wiki.thobens.ch/display/PHPLUG/Home
  
 Want to contribute? Or do you have any ideas to improve this project?
 Go to http://contribution.phplug.net
 
 It would be grateful, if you would report issues on http://issues.phplug.net
  
-A SVN repository is available at http://svn.phplug.net
+A GIT readonly repository is available at git://github.com/thobens/PHPlug.git
 
 
 
@@ -76,19 +73,15 @@ on the existent plugins.
  5. Contribution
  ----------------
  
-As this project is licensed under LGPL, you are welcome to contribute to this project.
-In section 2, you can see where to find information about contribution.
-Plugin developers may visit http://plugins.phplug.net to publish their plugins. 
+Everyone is welcome to contribute, so if you are interested to write some code, 
+drop me an email (thobens at gmail dot com).
  
  
  
  6. Known Issues
  ----------------
  
-- Class declaration fails if implemented interface is not declared yet (may be a PHP issue)
- 
- 
- You can see all issues on http://issues.phplug.net
+ You can see all issues on http://jira.thobens.ch (registration needed)
  
  
  
