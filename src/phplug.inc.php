@@ -37,7 +37,7 @@ $__phplug_platform = pf\PhplugPlatform::getSingleton();
 $__phplug_platform->preparePlugins();
 if(!$__phplug_platform->loadPlatform()) {
 	$admin = pf\PhplugPlatform::getConfig()->getConfigEntry(PHPLUG_CFG_ADMIN_MAIL);
-	echo "Error loading platform... See log for details or cantact your <a href=\"mailto:$admin\">administrator</a>!";
+	die("Error loading platform... See log for details or cantact the administrator.");
 }
 
 // define the autoloader
@@ -48,6 +48,7 @@ function __autoload($class_name) {
 	$path = str_replace("\\","/",$path);
 	$path .= ".php";
 	if(file_exists($path)) {
+		$log->trace('autoloading '.$path);
 		require_once $path;
 		$success = true;
 	}

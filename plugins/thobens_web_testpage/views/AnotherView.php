@@ -3,9 +3,9 @@ namespace phplug\plugins\thobens_web_testpage\views;
 
 use phplug\plugins\phplug_ui\ui\views as v,
 	phplug\plugins\phplug_ui\ui\layouts,
-	phplug\plugins\phplug_ui_widgets_qx\widgets,
-	phplug\plugins\phplug_ui_widgets_qx\widgets\form,
-	phplug\plugins\phplug_ui_widgets_qx\widgets\form\controls,
+	phplug\plugins\phplug_ui_widgets_jquery\widgets,
+	phplug\plugins\phplug_ui_widgets_jquery\widgets\form,
+	phplug\plugins\phplug_ui_widgets_jquery\widgets\form\controls,
 	phplug\plugins\phplug_ui_widgets\widgets\form\controls as c;
 /**
  * 
@@ -20,7 +20,8 @@ class AnotherView extends v\ViewPart {
 	 */
 	public function createViewPart($parent) {
 		$layout = new layouts\GridLayout();
-		$text = new widgets\Text(null,0,"Another Form here");
+		$text = new widgets\Text(null,0,"Another Form here at ".date("H:i:s"));
+		$text->setId("testId");
 		$layout->addComposite($text,0,0,1,1);
 		
 		$form = new form\Form(null,0);

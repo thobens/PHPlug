@@ -21,7 +21,8 @@ class DefaultUIProcessor implements ui\UIProcessor {
 	
 	public function __construct() {
 		$this->smarty = new \Smarty();
-		$this->smarty->compile_dir = pf\PhplugPlatform::getConfig()->getConfigEntry(PHPLUG_CFG_PLUGINDIR)."/".phplug_ui_processor\UIProcessorPlugin::ID."/templates_c";
+		$this->smarty->compile_dir = pf\PhplugPlatform::getConfig()->getConfigEntry(PHPLUG_CFG_PLUGINDIR)
+										."/".phplug_ui_processor\UIProcessorPlugin::ID."/templates_c";
 		$this->assignments = array();
 		$this->templateStore = TemplateStore::getSingleton();
 	}

@@ -1,6 +1,8 @@
 <?php
 namespace phplug\plugins\phplug_ui\ui\layouts;
 
+use phplug\plugins\phplug_ui\ui\CompositePool;
+
 use phplug\platform as pf,
 	phplug\plugins\phplug_ui\ui;
 
@@ -33,6 +35,7 @@ class GridLayout extends Layout {
 	 * @return void
 	 */
 	public function addComposite(ui\IComposite $composite,$x,$y,$width,$height) {
+		parent::addComposite($composite);
 		$this->composites[$y][$x] = array("width" => $width, "height" => $height, "content" => $composite->draw());
 	}
 	

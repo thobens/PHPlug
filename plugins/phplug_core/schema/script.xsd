@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="script">
+		<xs:annotation>
+			<xs:documentation>
+				Style definition
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						Name of the script. To override an existing style definition,
+						use the same name and define a higher precedence.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="precedence" use="optional" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>
+						The precedence of this script. If the precedence > the precedence
+						of another script with the same name, it will be overwritten. The default is 10;
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="src" use="required" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The location of the script, based on the plugin's root
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

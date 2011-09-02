@@ -8,5 +8,9 @@
 	<buildpathentry kind="src" path="plugins/thobens_web_testpage"/>
 	<buildpathentry kind="src" path="src"/>
 	<buildpathentry kind="src" path="tests"/>
+	<buildpathentry kind="src" path="plugins/phplug_ui_widgets_jquery"/>
+	<buildpathentry kind="src" path="plugins/jquery_plugin"/>
+	<buildpathentry kind="src" path="plugins/phplug_ajax_support"/>
+	<buildpathentry kind="src" path="plugins/phplug_ui_widgets_qx"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 </buildpath>

@@ -14,7 +14,7 @@ class TestPerspective extends ui\Perspective {
 	public function createInitialLayout() {
 		$this->addView(new views\TestView(),ui\Perspective::CENTER);
 		$this->addView(new views\AnotherView(),ui\Perspective::EAST);
-		$this->addView(new views\NonsenseView(),ui\Perspective::WEST);
+		$this->addView(new views\NavigationView(),ui\Perspective::WEST);
 	}
 	
 }

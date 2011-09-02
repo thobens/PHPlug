@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="phplug_ui_widgets_jquery" version="1.0.0" class="phplug\plugins\phplug_ui_widgets_jquery\JQueryWidgetsPlugin">
+	<dependencies>
+		<dependency id="phplug_core"/>
+		<dependency id="jquery_plugin"/>
+	</dependencies>
+	
+	<extensions>
+		<extension point="ch.thobens.phplug.core.script">
+			<script name="jquery_ui_min" precedence="100" src="resources/js/jquery-ui-1.8.16.custom.min.js" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.style">
+			<style name="ch.thobens.phplug.ui.widgets.jquery" location="resources/css/metallic-blue/jquery-ui-1.8.16.custom.css" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.processor.template">
+			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/form.tpl" id="ch.thobens.templates.form.form" />
+			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/controls/input.tpl" id="ch.thobens.templates.form.controls.input" />
+			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/controls/select.tpl" id="ch.thobens.templates.form.controls.select" />
+			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/controls/textarea.tpl" id="ch.thobens.templates.form.controls.textarea" />
+			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/accordion.tpl" id="ch.thobens.templates.accordion" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.menuConfiguration">
+			<menuConfiguration menuClass="phplug\plugins\phplug_ui_widgets_jquery\widgets\menu\Menu" 
+					menuEntryClass="phplug\plugins\phplug_ui_widgets_jquery\widgets\menu\MenuEntry" />
+		</extension>
+	</extensions>
+
+</plugin>

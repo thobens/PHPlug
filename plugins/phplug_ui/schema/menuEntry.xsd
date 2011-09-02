@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="menuEntry">
+		<xs:annotation>
+			<xs:documentation>
+				A menu entry
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="label" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the label of a menu entry
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="parentId" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the id of the parent menu entry. if this menu entry is the root, the id of the menu must be provided instead.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="id" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						the id of a menu entry
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="action" type="xs:string" use="optional">
+				<xs:annotation>
+					<xs:documentation>
+						The id of the action that will be triggered when clicking on the menu entry. 
+						This can (but don't has to) be ignored if the menu entry has child menu entries.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

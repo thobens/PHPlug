@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="jquery_plugin" version="1.0.0" class="phplug\plugins\jquery_plugin\JQueryPlugin">
+	<dependencies>
+		<dependency id="phplug_core"/>
+	</dependencies>
+
+	<extensions>
+		<extension point="ch.thobens.phplug.core.script">
+			<script name="jquery_min" precedence="100" src="resources/js/jquery-1.6.2.min.js" />
+			<script name="component_update" precedence="100" src="resources/js/component-update-plugin.js" />
+			<script name="tinyscrollbar" precedence="100" src="resources/js/tinyscrollbar-plugin.min.js" />
+		</extension>
+	</extensions>
+
+</plugin>

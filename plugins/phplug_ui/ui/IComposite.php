@@ -49,4 +49,22 @@ interface IComposite {
 	 */
 	public function setId($id);
 	
+	/**
+	 * 
+	 * @param string $class
+	 */
+	public function addClass($class);
+	
+	/**
+	 * 
+	 * @param string $class
+	 */
+	public function removeClass($class);
+	
+	/**
+	 * 
+	 * @return array
+	 */
+	public function getClasses();
+	
 }

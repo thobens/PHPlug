@@ -78,6 +78,7 @@ class PhpluginExtensionRegistry implements IPhpluginExtensionRegistry {
 							$elements = $this->createConfigurationElements($child);
 							$extension = new PhpluginExtension();
 							$extension->addConfigurationElement($elements);
+							$extension->setDeclaringPlugin($plugin->getId());
 							$point->addExtension($extension);
 						}
 					}

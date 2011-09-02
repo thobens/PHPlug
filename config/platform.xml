@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE platform SYSTEM "http://phplug.net/phplug/dtd/platform.dtd">
 <platform>
-	<plugin id="phplug_core" active="true" class="CorePlugin" />
-	<plugin id="phplug_ui" active="true" class="UIPlugin" />
-	<plugin id="phplug_ui_processor" active="true" class="UIProcessorPlugin" />
-	<plugin id="phplug_ui_widgets" active="true" class="WidgetPlugin" />
-	<plugin id="phplug_ui_widgets_qx" active="true" class="WidgetPlugin" />
-	<plugin id="thobens_web_testpage" active="true" class="TestPagePlugin" />
+	<plugin id="phplug_core" active="true" />
+	<plugin id="phplug_ui" active="true" />
+	<plugin id="phplug_ui_processor" active="true" />
+	<plugin id="phplug_ui_widgets" active="true"  />
+	<plugin id="phplug_ajax_support" active="true" />
+	<plugin id="jquery_plugin" active="true" />
+	<plugin id="phplug_ui_widgets_jquery" active="true" />
+	<plugin id="thobens_web_testpage" active="true" />
 </platform>

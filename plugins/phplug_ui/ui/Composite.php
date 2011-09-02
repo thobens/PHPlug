@@ -43,6 +43,13 @@ abstract class Composite implements IComposite {
 	
 	/**
 	 * 
+	 * css classes
+	 * @var array
+	 */
+	private $classes;
+	
+	/**
+	 * 
 	 * @param $parent
 	 * @param $style
 	 * @return unknown_type
@@ -50,6 +57,7 @@ abstract class Composite implements IComposite {
 	public function __construct($parent, $style=0) {
 		$this->parent = $parent;
 		$this->style = $style;
+		$this->classes = array();
 	}
 	
 	/**
@@ -84,6 +92,9 @@ abstract class Composite implements IComposite {
 	 * @see phplug/plugins/ch.thobens.phplug.ui/ui/IComposite#getId()
 	 */
 	public function getId() {
+		if(!isset($this->id)) {
+			$this->id = uuid();
+		}
 		return $this->id;
 	}
 	
@@ -93,5 +104,33 @@ abstract class Composite implements IComposite {
 	 */
 	public function setId($id) {
 		$this->id = $id;
+	}
+	
+	/**
+	 * 
+	 * @param string $class
+	 */
+	public function addClass($class) {
+		$this->classes[] = $class;
+	}
+	
+	/**
+	 * 
+	 * @param string $class
+	 */
+	public function removeClass($class) {
+		foreach($this->classes as $key => $value) {
+			if($class==$value) {
+				unset($this->classes[$key]);
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 * @return array
+	 */
+	public function getClasses() {
+		return $this->classes;	
 	}
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="annotationMapping">
+		<xs:annotation>
+			<xs:documentation>
+				Maps a name of an Annotation to a class. This class must extend from phplug\plugins\phplug_core\annotations\Annotation
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="name" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The name the Annotation will have in the comments.
+						If the Annotation has name="Persist", you would use it in the comments as @Persist
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="class" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The class to map to the name.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE config SYSTEM "http://phplug.net/phplug/dtd/log.dtd">
 <log>
-	<logrule logLevel="WARN" fileNamePattern="ch.thobens.*"/>
+	<logrule logLevel="WARN" fileNamePattern="phplug\\plugins\\.*" />
+	<logrule logLevel="DEBUG" fileNamePattern="phplug\\platform\\.*" />
 </log>

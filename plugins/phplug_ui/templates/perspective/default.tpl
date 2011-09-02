@@ -13,7 +13,7 @@
 <div style="width:20%;float:left;" id="perspective_location_east">
 	{$perspective_location_east}
 </div>
-<div id="perspective_location_south">
+<div style="clear:both" id="perspective_location_south">
 	{$perspective_location_south}
 </div>
 <div id="perspective_location_foot">

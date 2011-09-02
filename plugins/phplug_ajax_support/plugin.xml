@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
+<plugin id="phplug_ajax_support" version="1.0.0" class="phplug\plugins\phplug_ajax_support\AjaxSupportPlugin">
+	<dependencies>
+		<dependency id="phplug_core"/>
+	</dependencies>
+	
+	<extensionPoints>
+		<extensionPoint schema="schema/service.xsd" id="ch.thobens.phplug.ajx.service"/>
+		<extensionPoint schema="schema/server.xsd" id="ch.thobens.phplug.ajx.server"/>
+	</extensionPoints>
+
+	<extensions>
+		<extension point="ch.thobens.phplug.core.script">
+			<script name="phplug_services" precedence="100" src="js/Service.js" />
+		</extension>
+		<extension point="ch.thobens.phplug.ajx.server">
+			<server class="phplug\plugins\phplug_ajax_support\services\ServicesServerPage" />
+			<server class="phplug\plugins\phplug_ajax_support\ui\UIUpdateServerPage" />
+		</extension>
+		<extension point="ch.thobens.phplug.core.annotationMapping">
+			<annotationMapping name="Expose" class="phplug\plugins\phplug_ajax_support\services\Expose" />
+			<annotationMapping name="Server" class="phplug\plugins\phplug_ajax_support\server\Server" />
+			<annotationMapping name="Service" class="phplug\plugins\phplug_ajax_support\services\Service" />
+		</extension>
+	</extensions>
+
+</plugin>

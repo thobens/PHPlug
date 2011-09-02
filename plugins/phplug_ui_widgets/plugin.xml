@@ -7,9 +7,4 @@
 		<dependency id="phplug_ui_processor"/>
 	</dependencies>
 	
-	<extensionPoints>
-		<extensionPoint schema="schema/menu.xsd" id="ch.thobens.phplug.ui.menu"/>
-		<extensionPoint schema="schema/menuEntry.xsd" id="ch.thobens.phplug.ui.menu.entry"/>
-	</extensionPoints>
-	
 </plugin>

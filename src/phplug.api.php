@@ -157,6 +157,19 @@ interface IPhpluginExtension {
 	 * @return unknown_type
 	 */
 	public function addConfigurationElement(IPhpluginConfigurationElement $element);
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 */
+	public function getDeclaringPlugin();
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 * @param unknown_type $declaringPlugin
+	 */
+	public function setDeclaringPlugin($declaringPlugin);
 }
 
 
@@ -340,4 +353,30 @@ interface IWorkbench extends Templateable {
 	 * @return void
 	 */
 	public function setUIProcessor($uiprocessor);
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 * @param unknown_type $banner
+	 */
+	public function setBanner($banner);
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 */
+	public function getBanner();
+
+	/**
+	 * 
+	 * Enter description here ...
+	 * @param unknown_type $applicationTitle
+	 */
+	public function setApplicationTitle($applicationTitle);
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 */
+	public function getApplicationTitle();
 }

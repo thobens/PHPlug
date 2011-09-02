@@ -9,9 +9,12 @@ use phplug\platform as pf;
  *
  */
 class WidgetPlugin extends pf\Phplugin {
+	
+	
 	public function start() {
 		
 	}
+	
 	public function stop() {
 		
 	}

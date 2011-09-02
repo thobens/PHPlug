@@ -6,6 +6,12 @@ namespace phplug\plugins\phplug_ui\ui\layouts;
  * @author A. Doebeli <thobens@gmail.com>
  *
  */
+use phplug\platform\PhplugLog;
+
+use phplug\plugins\phplug_ui\ui\CompositePool;
+
+use phplug\plugins\phplug_ui\ui\IComposite;
+
 abstract class Layout implements ILayout {
 	
 	/**
@@ -34,6 +40,11 @@ abstract class Layout implements ILayout {
 	 */
 	public function setTemplate($template) {
 		$this->template = $template;
+	}
+	
+	public function addComposite(IComposite $composite) {
+		$log = new PhplugLog();
+		CompositePool::getInstance()->addComposite($composite);
 	}
 	
 }

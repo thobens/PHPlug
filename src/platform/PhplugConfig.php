@@ -16,19 +16,19 @@ class PhplugConfig {
 	
 	/**
 	 * 
-	 * @var unknown_type
+	 * @var string
 	 */
 	private $filePath;
 	
 	/**
 	 * 
-	 * @var unknown_type
+	 * @var SimpleXMLElement
 	 */
 	private $xml;
 	
 	/**
 	 * 
-	 * @var unknown_type
+	 * @var array
 	 */
 	private $cache = array();
 	
@@ -37,11 +37,10 @@ class PhplugConfig {
 	/**
 	 * 
 	 * @param $filePath
-	 * @return unknown_type
 	 */
 	public function __construct($filePath=null) {
 		if($filePath==null) {
-			$filePath = PHPLUG_DEFAULT_CONFIG_PATH;
+			$filePath = $_SERVER["DOCUMENT_ROOT"].'/'.PHPLUG_DEFAULT_CONFIG_PATH;
 		}
 		$this->setFilePath($filePath);
 		$this->fileRead = false;
@@ -51,7 +50,7 @@ class PhplugConfig {
 	/**
 	 * 
 	 * @param $filePath
-	 * @return unknown_type
+	 * @return void
 	 */
 	public function setFilePath($filePath) {
 		$this->filePath = $filePath;
@@ -59,7 +58,7 @@ class PhplugConfig {
 	
 	/**
 	 * 
-	 * @return unknown_type
+	 * @return string
 	 */
 	public function getFilePath() {
 		return $this->filePath;
@@ -67,7 +66,7 @@ class PhplugConfig {
 	
 	/**
 	 * 
-	 * @return unknown_type
+	 * @return SimpleXMLElement
 	 */
 	public function readConfig() {
 		$path = $this->getFilePath();
@@ -81,7 +80,7 @@ class PhplugConfig {
 	
 	/**
 	 * 
-	 * @return unknown_type
+	 * @return void
 	 */
 	public function setConfig() {
 		$this->xml = $this->readConfig();
@@ -89,8 +88,8 @@ class PhplugConfig {
 	
 	/**
 	 * 
-	 * @param $key
-	 * @return unknown_type
+	 * @param $key the key of the config entry
+	 * @return string
 	 */
 	public function getConfigEntry($key) {
 		if(!$this->xml != null) {

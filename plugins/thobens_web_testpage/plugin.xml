@@ -4,10 +4,47 @@
 	<dependencies>
 		<dependency id="phplug_ui"/>
 		<dependency id="phplug_ui_widgets"/>
+		<dependency id="phplug_ajax_support"/>
+		<dependency id="jquery_plugin"/>
+		<dependency id="phplug_ui_widgets_jquery"/>
 	</dependencies>
 	<extensions>
+		<extension point="ch.thobens.phplug.ui.application">
+			<application initialPerspective="ch.thobens.web.perspective.default">
+				<branding title="PHPlug sample application" theme="metallic-blue" banner="resources/img/banner.png" />
+			</application>
+		</extension>
 		<extension point="ch.thobens.phplug.ui.perspective">
 			<perspective class="phplug\plugins\thobens_web_testpage\perspectives\TestPerspective" id="ch.thobens.web.perspective.default" nature="defaultNature" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.style">
+			<style name="ch.thobens.web.testpage.mainStyle" location="resources/styles/reset.css" />
+			<style name="ch.thobens.web.testpage.mainStyle" location="resources/styles/main.css" />
+		</extension>
+		<extension point="ch.thobens.phplug.ajx.service">
+			<service class="phplug\plugins\thobens_web_testpage\services\HelloWorldService" />
+		</extension>
+		<extension point="ch.thobens.phplug.core.script">
+			<script name="testpage_main_script" precedence="10" src="resources/js/main.js" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.menu">
+			<menu id="ch.thobens.testpage.mainNav" placeHolder="perspective_location_west" />
+		</extension>
+		<extension point="ch.thobens.phplug.ui.menuEntry">
+			<menuEntry id="ch.thobens.testpage.mainNav.menu1" parentId="ch.thobens.testpage.mainNav" label="Blubber" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu1.sub1" parentId="ch.thobens.testpage.mainNav.menu1" label="Lorem ipsum" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu1.sub2" parentId="ch.thobens.testpage.mainNav.menu1" label="dolor sit" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu1.sub3" parentId="ch.thobens.testpage.mainNav.menu1" label="amet" />
+			
+			<menuEntry id="ch.thobens.testpage.mainNav.menu2" parentId="ch.thobens.testpage.mainNav" label="Dingens" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu2.sub1" parentId="ch.thobens.testpage.mainNav.menu2" label="Lorem ipsum" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu2.sub2" parentId="ch.thobens.testpage.mainNav.menu2" label="dolor sit" />
+			
+			<menuEntry id="ch.thobens.testpage.mainNav.menu3" parentId="ch.thobens.testpage.mainNav" label="Gedoens" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu3.sub1" parentId="ch.thobens.testpage.mainNav.menu3" label="Lorem ipsum" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu3.sub2" parentId="ch.thobens.testpage.mainNav.menu3" label="dolor sit" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu3.sub3" parentId="ch.thobens.testpage.mainNav.menu3" label="amet" />
+			<menuEntry id="ch.thobens.testpage.mainNav.menu3.sub4" parentId="ch.thobens.testpage.mainNav.menu3" label="Lorem dolor" />
 		</extension>
 	</extensions>
 	<exports>

@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plugin SYSTEM "http://phplug.net/phplug/dtd/plugin.dtd">
 <plugin id="phplug_core" version="1.0.0" class="phplug\plugins\phplug_core\CorePlugin">
+	<extensionPoints>
+		<extensionPoint schema="schema/annotationMapping.xsd" id="ch.thobens.phplug.core.annotationMapping"/>
+		<extensionPoint schema="schema/script.xsd" id="ch.thobens.phplug.core.script"/>
+	</extensionPoints>
+	<extensions>
+		<extension point="ch.thobens.phplug.core.annotationMapping">
+			<annotationMapping name="Target" class="phplug\plugins\phplug_core\annotations\Annotation_Target" />
+			<annotationMapping name="Scope" class="phplug\plugins\phplug_core\contexts\Scope" />
+		</extension>
+	</extensions>
 	<exports>
 		<export folder="actions" />
 	</exports>

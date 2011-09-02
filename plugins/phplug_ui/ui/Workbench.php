@@ -1,6 +1,10 @@
 <?php
 namespace phplug\plugins\phplug_ui\ui;
 
+use phplug\plugins\phplug_core\CorePlugin;
+
+use phplug\plugins\phplug_ui\UIPlugin;
+
 use phplug\platform as pf;
 
 /**
@@ -39,6 +43,20 @@ class Workbench implements pf\IWorkbench {
 	 * @var UIProcessor
 	 */
 	private $uiProcessor;
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 * @var unknown_type
+	 */
+	private $banner;
+	
+	/**
+	 * 
+	 * Enter description here ...
+	 * @var unknown_type
+	 */
+	private $applicationTitle;
 	
 	/**
 	 * 
@@ -86,8 +104,12 @@ class Workbench implements pf\IWorkbench {
 	 */
 	public function draw() {
 		$this->getActivePerspective()->createInitialLayout();
+		$this->uiProcessor->assign("banner",$this->banner);
+		$this->uiProcessor->assign("applicationTitle",$this->applicationTitle);
 		$this->uiProcessor->assign("Workbench",$this->getActivePerspective()->draw());
-		echo $this->uiProcessor->process();
+		if(!pf\PhplugPlatform::getPluginById(CorePlugin::PLUGIN_ID)->isAjaxMode()) {
+			echo $this->uiProcessor->process();
+		}
 	}
 	
 	/**
@@ -128,6 +150,30 @@ class Workbench implements pf\IWorkbench {
 	 */
 	public function setUIProcessor($uiProcessor) {
 		$this->uiProcessor = $uiProcessor;
+	}
+	
+	/**
+	 * (non-PHPdoc)
+	 * @see phplug\platform.IWorkbench::setBanner()
+	 */
+	public function setBanner($banner) {
+		$this->banner = $banner;
+	}
+	
+	/**
+	 * (non-PHPdoc)
+	 * @see phplug\platform.IWorkbench::getBanner()
+	 */
+	public function getBanner() {
+		return $this->banner;
+	}
+	
+	public function setApplicationTitle($applicationTitle) {
+		$this->applicationTitle = $applicationTitle;
+	}
+	
+	public function getApplicationTitle() {
+		return $this->applicationTitle;
 	}
 	
 }

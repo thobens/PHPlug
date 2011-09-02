@@ -3,9 +3,9 @@ namespace phplug\plugins\thobens_web_testpage\views;
 
 use phplug\plugins\phplug_ui\ui\views as v,
 	phplug\plugins\phplug_ui\ui\layouts,
-	phplug\plugins\phplug_ui_widgets_qx\widgets,
-	phplug\plugins\phplug_ui_widgets_qx\widgets\form,
-	phplug\plugins\phplug_ui_widgets_qx\widgets\form\controls,
+	phplug\plugins\phplug_ui_widgets_jquery\widgets,
+	phplug\plugins\phplug_ui_widgets_jquery\widgets\form,
+	phplug\plugins\phplug_ui_widgets_jquery\widgets\form\controls,
 	phplug\plugins\phplug_ui_widgets\widgets\form\controls as c;
 
 /**

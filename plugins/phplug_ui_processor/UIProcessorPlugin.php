@@ -15,6 +15,7 @@ class UIProcessorPlugin extends pf\Phplugin {
 	public function start() {
 		
 	}
+	
 	public function stop() {
 		
 	}

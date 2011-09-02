@@ -18,6 +18,8 @@ class PhpluginExtension implements IPhpluginExtension {
 	 */
 	private $configurationElements;
 	
+	private $declaringPlugin;
+	
 	/**
 	 * Initializes the extension
 	 */
@@ -39,5 +41,13 @@ class PhpluginExtension implements IPhpluginExtension {
 	 */
 	public function addConfigurationElement(IPhpluginConfigurationElement $element) {
 		$this->configurationElements[] = $element;
+	}
+	
+	public function getDeclaringPlugin() {
+		return $this->declaringPlugin;
+	}
+	
+	public function setDeclaringPlugin($declaringPlugin) {
+		$this->declaringPlugin = $declaringPlugin;
 	}
 }

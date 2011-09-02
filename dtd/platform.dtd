@@ -4,5 +4,4 @@
 <!ELEMENT plugin	EMPTY>
 <!ATTLIST plugin
 			id			ID			#REQUIRED
-			class		CDATA		#REQUIRED
 			active	(true|false)	'false'>

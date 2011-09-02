@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="application">
+		<xs:annotation>
+			<xs:documentation>
+				Defines an application. Here you can configure where the initial Perspective is and what branding the application has.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="branding" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>
+							The branding defines the theme and some information about the vendor / developer
+						</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="title" type="xs:string" use="required">
+							<xs:annotation>
+								<xs:documentation>
+									The title of this application
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="favicon" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>
+									Specifies the path, relative from the declaring plugins root, where the favicon is lying
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="theme" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>
+									The theme to use for the application. This refers to the name of a theme that is registered as an extension
+									from the extension point ch.thobens.phplug.core.theme
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+						<xs:attribute name="banner" type="xs:string" use="optional">
+							<xs:annotation>
+								<xs:documentation>
+									This is a path, relative from the declaring plugin, to a banner image.
+								</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="initialPerspective" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+						The perspective to show initially, when the page is loaded first.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

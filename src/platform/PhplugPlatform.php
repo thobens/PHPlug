@@ -398,6 +398,15 @@ class PhplugPlatform implements IPhplugPlatform {
 	}
 	
 	/**
+	 * Returns the Plugin's activator based on it's id
+	 * 
+	 * @param IPhplugin $id
+	 */
+	public static function getPluginById($id) {
+		return self::$plugins[$id];
+	}
+	
+	/**
 	 * Saves the state of the whole Platform as a serialized string in the Session
 	 * 
 	 * @return unknown_type
@@ -439,6 +448,9 @@ class PhplugPlatform implements IPhplugPlatform {
 	 * Serializes the platform and saves it a string in the session
 	 */
 	public function __destruct() {
+		foreach(self::$plugins as $plugin) {
+			$plugin->stop();
+		}
 		$this->saveState();
 	}
 	
