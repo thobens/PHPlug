@@ -1,1 +1,0 @@
-<textarea cols="{$cols}" rows="{$rows}" name="{$name}" id="{$name}">{$value}</textarea>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE platform SYSTEM "http://phplug.net/phplug/dtd/platform.dtd">
+<!DOCTYPE platform PUBLIC "-//PHPLUG//DTD PLUGIN 1.0 DEFAULT//EN" "http://phplug.org/demo/PHPlug/dtd/platform.dtd">
 <platform>
 	<plugin id="phplug_core" active="true" />
 	<plugin id="phplug_ui" active="true" />
