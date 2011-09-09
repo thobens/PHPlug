@@ -1,6 +1,12 @@
 <?php
 namespace phplug\plugins\thobens_web_testpage\views;
 
+use phplug\plugins\phplug_ui_widgets_jquery\widgets\dialog\Dialog;
+
+use phplug\plugins\phplug_core\actions\Action;
+
+use phplug\plugins\phplug_ui\ui\listener\EventListener;
+
 use phplug\plugins\phplug_ui\ui\views as v,
 	phplug\plugins\phplug_ui\ui\layouts,
 	phplug\plugins\phplug_ui_widgets_jquery\widgets,
@@ -50,6 +56,26 @@ class AnotherView extends v\ViewPart {
 		$form->addField($submit,0,2,1,1);
 		
 		$layout->addComposite($form,0,1,1,1);
+		
+		$openDialog = new controls\Input(null);
+		$openDialog->setName("openDialog");
+		$openDialog->setType("submit");
+		$openDialog->setValue("Open Dialog");
+		$odListener = new EventListener();
+		$odListener->setEvent('click');
+		$odAction = new Action();
+		$odAction->setJS('$("#dialog").dialog("open");return false;');
+		$odListener->addAction($odAction);
+		$openDialog->addEventListener($odListener);
+		$layout->addComposite($openDialog,0,2,1,1);
+		
+		$dialog = new Dialog(null);
+		$dialog->setId("dialog");
+		$dialog->setTitle("Test Dialog");
+		$dialog->setModal(true);
+		$dialog->setWidth(300);
+		$dialog->setComposite(new widgets\Text(null,0,"This is a test dialog"));
+		$layout->addComposite($dialog,0,3,1,1);
 
 		$this->setLayout($layout);
 	}

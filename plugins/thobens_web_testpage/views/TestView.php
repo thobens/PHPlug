@@ -34,6 +34,7 @@ class TestView extends v\ViewPart {
 		
 		$input = new controls\Input(null,0);
 		$input->setName("test");
+		$input->setId("test");
 		$input->setType("text");
 		$input->setValue("TestInput");
 		
