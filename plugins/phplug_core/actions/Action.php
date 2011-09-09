@@ -1,11 +1,9 @@
 <?php
 namespace phplug\plugins\phplug_core\actions;
 /**
- * IAction.php
+ * Action.php
  * 
- * This File provies the Action Interface
- * 
- * date: 2010-03-12
+ * This File provies the Action class
  * 
  * @see LICENSE.txt
  * @version 0.1
@@ -18,13 +16,19 @@ namespace phplug\plugins\phplug_core\actions;
  * @author A. Doebeli <thobens@gmail.com>
  *
  */
-interface IAction {
+class Action implements IAction {
+	
+	private $js;
 	
 	/**
 	 * 
 	 * @return void
 	 */
-	public function setJS($js);
+	public function setJS($js) {
+		$this->js = $js;
+	}
 	
-	public function getJS();
+	public function getJS() {
+		return $this->js;
+	}
 }
