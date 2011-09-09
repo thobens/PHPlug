@@ -1,0 +1,10 @@
+<project name="PHPlug" basedir="." default="deploy">
+	
+	<target name="deploy">
+		<echo message="Deploying PHPlug demo..." />
+		<copy todir="/var/www/phplug/demo/PHPlug">
+			<fileset dir="${basedir}" />
+		</copy>
+	</target>
+	
+</project>
