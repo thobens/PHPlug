@@ -17,9 +17,12 @@ class Input extends controls\Input {
 	
 	public function draw() {
 		$uip = pf\PhplugPlatform::getActiveWorkbench()->getUIProcessor();
+		$uip->assign("id",$this->getId());
 		$uip->assign("name",$this->getName());
 		$uip->assign("value",$this->getValue());
 		$uip->assign("type",$this->getType());
+		//TODO should be handled on a lower level
+		$uip->assign("events", $this->eventListeners);
 		return $uip->process("ch.thobens.templates.form.controls.input");
 	}
 	
