@@ -19,6 +19,7 @@
 			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/controls/select.tpl" id="ch.thobens.templates.form.controls.select" />
 			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/controls/textarea.tpl" id="ch.thobens.templates.form.controls.textarea" />
 			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/accordion.tpl" id="ch.thobens.templates.accordion" />
+			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/dialog/dialog.tpl" id="ch.thobens.templates.widgets.dialog" />
 		</extension>
 		<extension point="ch.thobens.phplug.ui.menuConfiguration">
 			<menuConfiguration menuClass="phplug\plugins\phplug_ui_widgets_jquery\widgets\menu\Menu" 
