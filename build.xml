@@ -1,10 +1,24 @@
 <project name="PHPlug" basedir="." default="deploy">
+	<property file="build.properties"/>
 	
 	<target name="deploy">
 		<echo message="Deploying PHPlug demo..." />
 		<copy todir="/var/www/phplug/demo/PHPlug">
 			<fileset dir="${basedir}" />
 		</copy>
+	</target>
+	
+	<target name="release">
+		<echo message="Creating artifact" />
+		<mkdir dir="${org.phplug.release.dir}"/>
+		<delete file="${org.phplug.release.target.file}" />
+		<zip destfile="${org.phplug.release.target.file}">
+			<fileset dir="${basedir}/..">
+				<include name="PHPlug/*/**"/>
+				<exclude name="PHPlug/build.xml"/>
+				<exclude name="PHPlug/build.properties"/>
+			</fileset>
+		</zip>
 	</target>
 	
 </project>
