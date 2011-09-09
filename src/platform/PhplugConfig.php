@@ -40,7 +40,7 @@ class PhplugConfig {
 	 */
 	public function __construct($filePath=null) {
 		if($filePath==null) {
-			$filePath = $_SERVER["DOCUMENT_ROOT"].'/'.PHPLUG_DEFAULT_CONFIG_PATH;
+			$filePath = dirname(__FILE__).'/../../../'.PHPLUG_DEFAULT_CONFIG_PATH;
 		}
 		$this->setFilePath($filePath);
 		$this->fileRead = false;
