@@ -15,7 +15,7 @@ abstract class Composite implements IComposite {
 	 * 
 	 * @var IEventListener
 	 */
-	private $eventListeners;
+	protected $eventListeners;
 	
 	/**
 	 * 
@@ -27,7 +27,7 @@ abstract class Composite implements IComposite {
 	 * The id of this Composite
 	 * @var string
 	 */
-	private $id;
+	protected $id;
 	
 	/**
 	 * 
@@ -39,14 +39,14 @@ abstract class Composite implements IComposite {
 	 * 
 	 * @var int
 	 */
-	private $style;
+	protected $style;
 	
 	/**
 	 * 
 	 * css classes
 	 * @var array
 	 */
-	private $classes;
+	protected $classes;
 	
 	/**
 	 * 
@@ -80,7 +80,7 @@ abstract class Composite implements IComposite {
 	 * (non-PHPdoc)
 	 * @see phplug/plugins/ch.thobens.phplug.ui/ui/IComposite#addEventListener()
 	 */
-	public function addEventListener(listener\IEventListener $listener) {
+	public function addEventListener($listener) {
 		if(!isset($this->eventListeners)) {
 			$this->eventListeners = array();
 		}

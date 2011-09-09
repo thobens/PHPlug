@@ -34,7 +34,7 @@ interface IComposite {
 	 * 
 	 * @return void
 	 */
-	public function addEventListener(listener\IEventListener $listener);
+	public function addEventListener($listener);
 	
 	/**
 	 * 
