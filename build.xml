@@ -17,7 +17,7 @@
 			<arg value="${org.phplug.release.target.dir}"/>
 		</exec>
 		<delete file="${org.phplug.release.target.file}" />
-		<zip destfile="${org.phplug.release.target.file}" basedir=".." includes="PHPlug/*/**" excludes="PHPlug/build.*" />
+		<zip destfile="${org.phplug.release.target.file}" basedir="." includes="*/**" excludes="build.*" />
 	</target>
 	
 </project>
