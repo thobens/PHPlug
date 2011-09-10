@@ -12,13 +12,7 @@
 		<echo message="Creating artifact" />
 		<mkdir dir="${org.phplug.release.dir}"/>
 		<delete file="${org.phplug.release.target.file}" />
-		<zip destfile="${org.phplug.release.target.file}">
-			<fileset dir="${basedir}/..">
-				<include name="PHPlug/*/**"/>
-				<exclude name="PHPlug/build.xml"/>
-				<exclude name="PHPlug/build.properties"/>
-			</fileset>
-		</zip>
+		<zip destfile="${org.phplug.release.target.file}" basedir=".." includes="PHPlug/*/**" excludes="PHPlug/build.*" />
 	</target>
 	
 </project>
