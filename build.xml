@@ -10,7 +10,7 @@
 	
 	<target name="release">
 		<echo message="Creating artifact" />
-		<mkdir dir="${org.phplug.release.dir}"/>
+		<mkdir dir="${org.phplug.release.target.dir}"/>
 		<delete file="${org.phplug.release.target.file}" />
 		<zip destfile="${org.phplug.release.target.file}" basedir=".." includes="PHPlug/*/**" excludes="PHPlug/build.*" />
 	</target>
