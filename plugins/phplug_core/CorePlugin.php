@@ -30,15 +30,15 @@ class CorePlugin extends pf\Phplugin {
 	
 	public function start() {
 		$this->initAnnotations();
-		$this->contextDB =  PHPLUG_DEFAULT_WORKING_DIR.'/context.db';
-		if(!file_exists($this->contextDB)) {
-			touch($this->contextDB);
-			$this->initDBHandle();
-			$this->initDB();
-		} else {
-			$this->initDBHandle();
-		}
-		Contexts::initContexts();
+// 		$this->contextDB =  PHPLUG_DEFAULT_WORKING_DIR.'/context.db';
+// 		if(!file_exists($this->contextDB)) {
+// 			touch($this->contextDB);
+// 			$this->initDBHandle();
+// 			$this->initDB();
+// 		} else {
+// 			$this->initDBHandle();
+// 		}
+// 		Contexts::initContexts();
 		$this->loadScripts();
 	}
 	
@@ -99,8 +99,8 @@ class CorePlugin extends pf\Phplugin {
 	}
 	
 	public function stop() {
-		Contexts::saveContexts();
-		sqlite_close($this->dbHandle);
+// 		Contexts::saveContexts();
+// 		sqlite_close($this->dbHandle);
 	}
 	
 	public function getContextDBHandle() {

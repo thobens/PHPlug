@@ -32,7 +32,7 @@ class ListLayout extends Layout {
 	 * @return unknown_type
 	 */
 	public function addComposite(ui\IComposite $composite, $width, $height) {
-		parent::addComposite(&$composite);
+		parent::addComposite($composite);
 		$this->composites[] = array("width" => $width, "height" => $height, "content" => $composite->draw());
 	}
 	

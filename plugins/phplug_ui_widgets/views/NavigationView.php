@@ -7,7 +7,7 @@ use phplug\plugins\phplug_ui\ui\layouts\GridLayout;
 
 use phplug\plugins\phplug_ui\ui\views\ViewPart;
 
-use phplug\plugins\thobens_web_testpage\test\TestAnnotationField;
+use phplug\plugins\trapadoo_page\test\TestAnnotationField;
 
 use phplug\plugins\phplug_ui_widgets_jquery\widgets\Accordion;
 

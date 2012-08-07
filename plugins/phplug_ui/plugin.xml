@@ -18,14 +18,14 @@
 	
 	<extensions>
 		<extension point="ch.thobens.phplug.ui.workbench">
-			<workbench class="phplug\plugins\phplug_ui\ui\Workbench" template="$pluginPath/templates/workbench/default.tpl" />
+			<workbench class="phplug\plugins\phplug_ui\ui\Workbench" template="/trapadoo$pluginPath/templates/workbench/default.tpl" />
 		</extension>
 		<extension point="ch.thobens.phplug.ui.processor.template">
-			<template path="/PHPlug/plugins/phplug_ui/templates/perspective/default.tpl" id="ch.thobens.templates.perspective.default" />
-			<template path="/PHPlug/plugins/phplug_ui/templates/layout/grid.tpl" id="ch.thobens.templates.layout.grid" />
-			<template path="/PHPlug/plugins/phplug_ui/templates/layout/float.tpl" id="ch.thobens.templates.layout.float" />
-			<template path="/PHPlug/plugins/phplug_ui/templates/layout/list.tpl" id="ch.thobens.templates.layout.list" />
-			<template path="/PHPlug/plugins/phplug_ui/templates/container.tpl" id="ch.thobens.templates.container" />
+			<template path="/trapadoo/PHPlug/plugins/phplug_ui/templates/perspective/default.tpl" id="ch.thobens.templates.perspective.default" />
+			<template path="/trapadoo/PHPlug/plugins/phplug_ui/templates/layout/grid.tpl" id="ch.thobens.templates.layout.grid" />
+			<template path="/trapadoo/PHPlug/plugins/phplug_ui/templates/layout/float.tpl" id="ch.thobens.templates.layout.float" />
+			<template path="/trapadoo/PHPlug/plugins/phplug_ui/templates/layout/list.tpl" id="ch.thobens.templates.layout.list" />
+			<template path="/trapadoo/PHPlug/plugins/phplug_ui/templates/container.tpl" id="ch.thobens.templates.container" />
 		</extension>
 	</extensions>
 	

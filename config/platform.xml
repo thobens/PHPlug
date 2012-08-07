@@ -8,5 +8,5 @@
 	<plugin id="phplug_ajax_support" active="true" />
 	<plugin id="jquery_plugin" active="true" />
 	<plugin id="phplug_ui_widgets_jquery" active="true" />
-	<plugin id="thobens_web_testpage" active="true" />
+	<plugin id="trapadoo_page" active="true" />
 </platform>

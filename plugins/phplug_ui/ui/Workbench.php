@@ -1,6 +1,8 @@
 <?php
 namespace phplug\plugins\phplug_ui\ui;
 
+use phplug\platform\PhplugLog;
+
 use phplug\plugins\phplug_core\CorePlugin;
 
 use phplug\plugins\phplug_ui\UIPlugin;
@@ -87,6 +89,8 @@ class Workbench implements pf\IWorkbench {
 	 * @see phplug/inc/IWorkbench#registerPerspective()
 	 */
 	public function registerPerspective($id, $perspective) {
+		$log = new PhplugLog();
+		$log->debug("registering perspective: ". $perspective->getId());
 		$this->perspectives[$id] = $perspective;
 	}
 

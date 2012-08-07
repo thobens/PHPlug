@@ -11,7 +11,7 @@
 			<script name="jquery_ui_min" precedence="100" src="resources/js/jquery-ui-1.8.16.custom.min.js" />
 		</extension>
 		<extension point="ch.thobens.phplug.ui.style">
-			<style name="ch.thobens.phplug.ui.widgets.jquery" location="resources/css/metallic-blue/jquery-ui-1.8.16.custom.css" />
+			<style name="ch.thobens.phplug.ui.widgets.jquery" location="resources/css/trapadoo-green/jquery-ui-1.8.22.custom.css" />
 		</extension>
 		<extension point="ch.thobens.phplug.ui.processor.template">
 			<template path="/PHPlug/plugins/phplug_ui_widgets_jquery/templates/form/form.tpl" id="ch.thobens.templates.form.form" />
