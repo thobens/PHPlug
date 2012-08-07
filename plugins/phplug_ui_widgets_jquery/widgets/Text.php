@@ -19,6 +19,7 @@ class Text extends widgets\Text {
 		$uip = pf\PhplugPlatform::getActiveWorkbench()->getUIProcessor();
 		$uip->assign("content",$this->getText());
 		$uip->assign("id", $this->getId());
+		$uip->assign("classes", implode(" ", $this->classes));
 		$contents = $uip->process("ch.thobens.templates.container");
 		return $contents;
 	}

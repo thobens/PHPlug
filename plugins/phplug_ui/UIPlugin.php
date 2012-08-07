@@ -23,16 +23,21 @@ class UIPlugin extends pf\Phplugin {
 	const PLUGIN_ID = "phplug_ui";
 	
 	public function start() {
-		if(!PhplugPlatform::getPluginById(CorePlugin::PLUGIN_ID)->isAjaxMode() || 
+		if(!pf\PhplugPlatform::getPluginById(CorePlugin::PLUGIN_ID)->isAjaxMode() || 
 			($componentId = $this->getComponentToUpdate()) != null) {
 			$this->menus = array();
-			$this->initWorknench();
+			$this->initWorkbench();
 			$this->initPerspectives();
 			$this->initApplication();
 			$this->initMenu();
 			$this->applyStyles();
 			$this->applyScripts();
+			$perspectiveId = isset($_GET['perspective']) ? $_GET['perspective'] : PhplugPlatform::getActiveWorkbench()->getActivePerspective()->getId();
+			self::$workbench->setPerspective($perspectiveId);
+			self::$log->info("Loading perspective ".PhplugPlatform::getActiveWorkbench()->getActivePerspective()->getId());
+			pf\PhplugPlatform::setActiveWorkbench(self::$workbench);
 			self::$workbench->draw();
+			
 		}
 	}
 	
@@ -100,9 +105,10 @@ class UIPlugin extends pf\Phplugin {
 			$initialPerspective = $el->getAttribute("initialPerspective");
 			$bEl = $el->getChildren();
 			$bEl = $bEl["branding"];
-			self::$workbench->setPerspective($initialPerspective);
+// 			self::$workbench->setPerspective($initialPerspective);
 			self::$workbench->setBanner($cfg->getConfigEntry(PHPLUG_CFG_PLUGINDIR).'/'.$ext->getDeclaringPlugin().'/'.$bEl->getAttribute("banner"));
 			self::$workbench->setApplicationTitle($bEl->getAttribute("title"));
+			pf\PhplugPlatform::setActiveWorkbench(self::$workbench);
 		}
 	}
 	
@@ -116,7 +122,7 @@ class UIPlugin extends pf\Phplugin {
 		return $componentId;
 	}
 	
-	private function initWorknench() {
+	private function initWorkbench() {
 		$extensions = pf\PhplugPlatform::getExtensionRegistry()
 							->getExtensionPoint("ch.thobens.phplug.ui.workbench")
 							->getExtensions();
@@ -137,15 +143,13 @@ class UIPlugin extends pf\Phplugin {
 		}
 		$uiProcessor = $this->initUIProcessor();
 		self::$workbench->setUIProcessor($uiProcessor);
-		pf\PhplugPlatform::setActiveWorkbench(self::$workbench);
 	}
 	
 	private function applyStyles() {
 		$extensions = pf\PhplugPlatform::getExtensionRegistry()
 							->getExtensionPoint("ch.thobens.phplug.ui.style")
 							->getExtensions();
-		$uiProcessor = pf\PhplugPlatform::getActiveWorkbench()
-							->getUIProcessor();
+		$uiProcessor = self::$workbench->getUIProcessor();
 		$styles = array();
 		$cfg = pf\PhplugPlatform::getConfig();
 		$stylePrecedence = array();
@@ -162,8 +166,7 @@ class UIPlugin extends pf\Phplugin {
 	}
 	
 	private function applyScripts() {
-		$uiProcessor = pf\PhplugPlatform::getActiveWorkbench()
-							->getUIProcessor();
+		$uiProcessor = self::$workbench->getUIProcessor();
 		$uiProcessor->assign('scripts',pf\PhplugPlatform::getPluginById(CorePlugin::PLUGIN_ID)->getScripts());
 	}
 	
@@ -206,11 +209,11 @@ class UIPlugin extends pf\Phplugin {
 				$perspective = new $className();
 				$id = $el->getAttribute("id");
 				if($i==0) {
-					pf\PhplugPlatform::getActiveWorkbench()->setPerspective($id);
+					self::$workbench->setPerspective($id);
 				}
 				$perspective->setId($id);
 				$perspective->initialize();
-				pf\PhplugPlatform::getActiveWorkbench()->registerPerspective($id,$perspective);
+				self::$workbench->registerPerspective($id,$perspective);
 				$i++;
 			}
 		}

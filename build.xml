@@ -9,7 +9,8 @@
 	</target>
 	
 	<target name="deploy">
-		<echo message="Deploying PHPlug demo..." />
+		<echo message="Deploying PHPlug..." />
+		<delete dir="${org.phplug.deploy.dir}/PHPlug"/>
 		<copy todir="${org.phplug.deploy.dir}">
 			<fileset dir="${basedir}" />
 		</copy>

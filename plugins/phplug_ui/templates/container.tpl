@@ -1,3 +1,3 @@
-<div class="Container" id="{$id}">
+<div class="Container {$classes}" id="{$id}">
 {$content}
 </div>
