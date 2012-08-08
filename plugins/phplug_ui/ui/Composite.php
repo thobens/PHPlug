@@ -93,7 +93,7 @@ abstract class Composite implements IComposite {
 	 */
 	public function getId() {
 		if(!isset($this->id)) {
-			$this->id = uuid();
+			$this->id = "id-".uuid();
 		}
 		return $this->id;
 	}
